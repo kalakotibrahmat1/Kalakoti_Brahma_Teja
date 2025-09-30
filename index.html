@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K. Brahma Teja - Cybersecurity Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teal: '#00ADB5',
+                        blue: '#007BFF',
+                        dark: '#222222'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['IBM Plex Sans', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 173, 181, 0.2);
+        }
+        .project-card:hover {
+            transform: rotate(1deg) scale(1.01);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .skill-card:hover .skill-level {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .timeline-dot:hover {
+            box-shadow: 0 0 0 8px rgba(0, 173, 181, 0.2);
+        }
+        .goal-card:hover {
+            box-shadow: 0 0 0 2px #00ADB5;
+        }
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        .btn-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px -5px rgba(0, 173, 181, 0.4);
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-white antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="font-mono text-xl font-semibold">KALAKOTI BRAHMA TEJA</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-teal transition-colors">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-teal transition-colors">Skills</a>
+                    <a href="#projects" class="text-gray-600 hover:text-teal transition-colors">Projects</a>
+                    <a href="#experience" class="text-gray-600 hover:text-teal transition-colors">Experience</a>
+                    <a href="#contact" class="text-gray-600 hover:text-teal transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">K Brahma Teja</h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-6 hovered-element">Cybersecurity Student | Passionate about Cybersecurity & Data Analytics</p>
+                <p class="text-gray-500 mb-8">Focused on penetration testing, vulnerability assessment, and AI-driven cybersecurity.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://drive.google.com/file/d/1bBwXyaYgV2xB0s7AAzi1BSBT92QfTf50/view?usp=drive_link" target="_blank" class="btn-hover bg-teal text-white px-6 py-3 rounded-lg font-medium">Download Resume</a>
+                    <a href="#contact" class="btn-hover border border-teal text-teal px-6 py-3 rounded-lg font-medium">Request Resume via Email</a>
+                    <a href="#projects" class="btn-hover text-gray-600 px-6 py-3 rounded-lg font-medium flex items-center">
+                        View Projects <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+            <div data-aos="fade-left" class="flex justify-center">
+                <div class="w-70 h-70 bg-gradient-to-br from-teal to-blue rounded-full">
+                    <img src="https://github.com/kalakotibrahmat1/My/blob/main/2.JPG?raw=true" alt="Profile" class="w-full h-full object-cover rounded-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="https://raw.githubusercontent.com/kalakotibrahmat1/My/refs/heads/main/DSC05644.JPG" alt="Profile" class="rounded-lg shadow-lg">
+                </div>
+                <div data-aos="fade-left">
+                    <p class="text-lg text-gray-600 mb-8">I'm a B.Tech student in CSE (Cybersecurity) with hands-on experience in penetration testing, vulnerability assessment, and digital forensics. Skilled in Python, SQL, and Java, I am eager to apply AI/ML in cybersecurity to tackle modern security challenges.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center" data-aos="fade-up" data-aos-delay="100">
+                            <i data-feather="book" class="w-8 h-8 text-teal mx-auto mb-2"></i>
+                            <p class="font-medium">B.Tech in Cybersecurity</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center" data-aos="fade-up" data-aos-delay="200">
+                            <i data-feather="bar-chart-2" class="w-8 h-8 text-teal mx-auto mb-2"></i>
+                            <p class="font-medium">Passion: Cybersecurity & Data Analytics</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center" data-aos="fade-up" data-aos-delay="300">
+                            <i data-feather="cloud" class="w-8 h-8 text-teal mx-auto mb-2"></i>
+                            <p class="font-medium">Future Goals: CompTIA Security+, AWS Security, AI/ML</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stat-card bg-white p-6 rounded-lg shadow-sm text-center" data-aos="fade-up">
+                    <div class="text-3xl font-bold text-teal mb-2" data-count="3">0</div>
+                    <p class="text-gray-600">Cybersecurity Projects</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-sm text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl font-bold text-teal mb-2" data-count="2">0</div>
+                    <p class="text-gray-600">Internships / Workshops</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-sm text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl font-bold text-teal mb-2" data-count="5">0</div>
+                    <p class="text-gray-600">Certifications</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-lg shadow-sm text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl font-bold text-teal mb-2" data-count="500">0</div>
+                    <p class="text-gray-600">Hours of Training</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Skills & Proficiencies</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="skill-card bg-white p-6 rounded-lg shadow-sm" data-aos="fade-up">
+                    <h3 class="font-semibold text-lg mb-4 text-teal">Cybersecurity Tools</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between items-center">Nmap <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Advanced</span></li>
+                        <li class="flex justify-between items-center">Burp Suite <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Intermediate</span></li>
+                        <li class="flex justify-between items-center">Wireshark <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Intermediate</span></li>
+                        <li class="flex justify-between items-center">SQL Injection <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Advanced</span></li>
+                        <li class="flex justify-between items-center">VAPT <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Intermediate</span></li>
+                        <li class="flex justify-between items-center">Autopsy <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Intermediate</span></li>
+                    </ul>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-semibold text-lg mb-4 text-teal">Programming</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between items-center">Python <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Advanced</span></li>
+                        <li class="flex justify-between items-center">SQL <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Advanced</span></li>
+                        <li class="flex justify-between items-center">Java <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Intermediate</span></li>
+                        <li class="flex justify-between items-center">DSA <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Intermediate</span></li>
+                    </ul>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-semibold text-lg mb-4 text-teal">Operating Systems</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between items-center">Kali Linux <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Intermediate</span></li>
+                        <li class="flex justify-between items-center">Windows <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Advanced</span></li>
+                    </ul>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="font-semibold text-lg mb-4 text-teal">Emerging Interests</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between items-center">AI/ML in Cybersecurity <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Beginner</span></li>
+                        <li class="flex justify-between items-center">Cloud Security <span class="skill-level text-xs bg-teal/10 text-teal px-2 py-1 rounded opacity-0 transform translate-y-2 transition-all">Beginner</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Projects Showcase</h2>
+            <div class="space-y-12">
+                <div class="project-card bg-white rounded-lg shadow-sm overflow-hidden transition-all" data-aos="fade-up">
+                    <div class="md:flex">
+                        <div class="md:w-1/2">
+                            <img src="http://static.photos/technology/640x360/10" alt="MedSafe Project" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <h3 class="text-2xl font-semibold mb-4">MedSafe (Blockchain + QR Codes)</h3>
+                            <p class="text-gray-600 mb-6">Decentralized medical device ownership verification to reduce counterfeit risks.</p>
+                            <a href="https://github.com/kalakotibrahmat1/Med_Safe.git" target="_blank" class="inline-flex items-center text-teal font-medium">
+                                View Source Code <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-lg shadow-sm overflow-hidden transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="md:flex md:flex-row-reverse">
+                        <div class="md:w-1/2">
+                            <img src="http://static.photos/technology/640x360/11" alt="Exam Surveillance Tool" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <h3 class="text-2xl font-semibold mb-4">Exam Surveillance Tool</h3>
+                            <p class="text-gray-600 mb-6">Monitors keystrokes, USB activity, and screenshots to secure lab exams.</p>
+                            <a href="#" target="_blank" class="inline-flex items-center text-teal font-medium">
+                                View Case Study <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-lg shadow-sm overflow-hidden transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="md:flex">
+                        <div class="md:w-1/2">
+                            <img src="http://static.photos/technology/640x360/12" alt="Hand Gesture Control" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <h3 class="text-2xl font-semibold mb-4">Hand Gesture Volume Control</h3>
+                            <p class="text-gray-600 mb-6">Real-time gesture tracking with OpenCV + MediaPipe.</p>
+                            <a href="https://github.com/kalakotibrahmat1/Hand_Gesture.git" target="_blank" class="inline-flex items-center text-teal font-medium">
+                                View Source Code <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Professional Experience</h2>
+            <div class="relative">
+                <div class="absolute left-4 md:left-1/2 -ml-1 h-full w-0.5 bg-teal/20"></div>
+                <div class="space-y-12">
+                    <div class="relative pl-12 md:pl-0 md:flex md:items-center" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <h3 class="text-xl font-semibold">Cantilever Labs (Intern)</h3>
+                            <p class="text-gray-600 mt-2">Performed network scans, vulnerability assessments, and web app testing.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 -ml-3.5 top-1.5 w-7 h-7 bg-teal rounded-full timeline-dot transition-all"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <p class="text-gray-600">Gained hands-on experience in real-world cybersecurity scenarios and vulnerability management.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative pl-12 md:pl-0 md:flex md:items-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <h3 class="text-xl font-semibold">Supraja Technologies (Workshop)</h3>
+                            <p class="text-gray-600 mt-2">Hands-on with Wireshark, phishing simulations, password cracking.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 -ml-3.5 top-1.5 w-7 h-7 bg-teal rounded-full timeline-dot transition-all"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <p class="text-gray-600">Enhanced practical skills in network analysis and security testing methodologies.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-12 md:pl-0 md:flex md:items-center" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <h3 class="text-xl font-semibold">CipherCops 2025 (Hachathon)</h3>
+                            <p class="text-gray-600 mt-2">Participated in a national-level Hackathon conducted by the Telangana Cyber Security Bureau (TGCSB), Bureau of Police Research & Development (BPR&D), and CDTI Hyderabad.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 -ml-3.5 top-1.5 w-7 h-7 bg-teal rounded-full timeline-dot transition-all"></div>
+                        <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <p class="text-gray-600">From over 360 projects submitted, our project was among the Top 28 selected to present at the hackathon.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Certifications</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center relative group" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="award" class="w-8 h-8 text-teal"></i>
+                    </div>
+                    <h3 class="font-semibold">Introduction to Cybersecurity</h3>
+                    <div class="absolute inset-0 bg-teal/90 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="text-white text-center p-4">
+                            <!-- <p class="font-semibold">Cisco</p>
+                            <p class="text-sm">2023</p> -->
+                            <a href="https://drive.google.com/file/d/1HRQEiMrMb-0ACtauN3kjyJP1r6JPib_1/view?usp=drive_link" target="_blank" class="font-semibold" data-aos="fade-up">Cisco</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center relative group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="award" class="w-8 h-8 text-teal"></i>
+                    </div>
+                    <h3 class="font-semibold">Python Crash Course</h3>
+                    <div class="absolute inset-0 bg-teal/90 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="text-white text-center p-4">
+                            <!-- <p class="font-semibold">Google</p>
+                            <p class="text-sm">2023</p> -->
+                            <a href="https://coursera.org/share/9a8baadcc445487d6306dac31813ea98" target="_blank" class="font-semibold" data-aos="fade-up">Google 2023</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center relative group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="award" class="w-8 h-8 text-teal"></i>
+                    </div>
+                    <h3 class="font-semibold">SQL & Relational Databases 101</h3>
+                    <div class="absolute inset-0 bg-teal/90 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="text-white text-center p-4">
+                            <!-- <p class="font-semibold">IBM</p>
+                            <p class="text-sm">2023</p> -->
+                            <a href="https://drive.google.com/file/d/1KX3k8m4UvWA71_9JOxVR5B1-24pRV1Xp/view?usp=drive_link" target="_blank" class="font-semibold" data-aos="fade-up">IBM 2023</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center relative group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="award" class="w-8 h-8 text-teal"></i>
+                    </div>
+                    <h3 class="font-semibold">Java Programming</h3>
+                    <div class="absolute inset-0 bg-teal/90 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="text-white text-center p-4">
+                            <!-- <p class="font-semibold">Oracle</p>
+                            <p class="text-sm">2023</p> -->
+                            <a href="https://drive.google.com/file/d/1rvmiS1MXenpNNDeUCtr9KGYr01KHaBAz/view?usp=drive_link" target="_blank" class="font-semibold" data-aos="fade-up">Oracle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Future Goals</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="goal-card bg-white p-6 rounded-lg shadow-sm text-center transition-all" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="target" class="w-8 h-8 text-teal"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">CompTIA Security+</h3>
+                    <p class="text-gray-600">Industry-standard cybersecurity certification</p>
+                </div>
+                <div class="goal-card bg-white p-6 rounded-lg shadow-sm text-center transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="cloud" class="w-8 h-8 text-teal"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">AWS Certified Security</h3>
+                    <p class="text-gray-600">Cloud security specialization</p>
+                </div>
+                <div class="goal-card bg-white p-6 rounded-lg shadow-sm text-center transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="cpu" class="w-8 h-8 text-teal"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">AI/ML in Cybersecurity</h3>
+                    <p class="text-gray-600">Advanced threat detection techniques</p>
+                </div>
+            </div>
+            <p class="text-center text-gray-500 mt-12" data-aos="fade-up">Always learning. Always adapting.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Get In Touch</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" required minlength="2" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-teal outline-none transition-all">
+                            <p class="text-red-500 text-sm hidden mt-1">Please enter your name</p>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-teal outline-none transition-all">
+                            <p class="text-red-500 text-sm hidden mt-1">Please enter a valid email</p>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" required minlength="10" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal focus:border-teal outline-none transition-all"></textarea>
+                            <p class="text-red-500 text-sm hidden mt-1">Please enter at least 10 characters</p>
+                        </div>
+                        <button type="submit" class="w-full bg-teal text-white py-3 px-6 rounded-lg font-medium btn-hover">Send Message</button>
+                    </form>
+                </div>
+                <div data-aos="fade-left" class="space-y-6">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-teal/10 rounded-full flex items-center justify-center mr-4">
+                            <i data-feather="mail" class="w-6 h-6 text-teal"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Email</p>
+                            <a href="mailto:kalakotibrahmateja3@gmail.com" class="text-gray-600 hover:text-teal transition-colors">kalakotibrahmateja3@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-teal/10 rounded-full flex items-center justify-center mr-4">
+                            <i data-feather="linkedin" class="w-6 h-6 text-teal"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">LinkedIn</p>
+                            <a href="https://linkedin.com/in/k-brahma-teja" target="_blank" class="text-gray-600 hover:text-teal transition-colors">/in/k-brahma-teja</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-teal/10 rounded-full flex items-center justify-center mr-4">
+                            <i data-feather="github" class="w-6 h-6 text-teal"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">GitHub</p>
+                            <a href="https://github.com/kalakotibrahmat1" target="_blank" class="text-gray-600 hover:text-teal transition-colors">github.com/kalakotibrahmat1</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-teal/10 rounded-full flex items-center justify-center mr-4">
+                            <i data-feather="phone" class="w-6 h-6 text-teal"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Phone</p>
+                            <a href="tel:+916281865005" class="text-gray-600 hover:text-teal transition-colors">+91 6281865005</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-600">© 2025 K. Brahma Teja — Designed with precision & security in mind.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-teal text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-16 opacity-0 transition-all">
+        Thanks! I'll get back to you soon.
+    </div>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Count-up animation for stats
+        const counters = document.querySelectorAll('[data-count]');
+        const speed = 200;
+
+        const startCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if(count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(() => startCounters(), 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        };
+
+        // Start counters when in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+
+        // Form validation
+        const form = document.querySelector('form');
+        const toast = document.getElementById('toast');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            // Name validation
+            const name = document.getElementById('name');
+            const nameError = name.nextElementSibling;
+            if (name.value.length < 2) {
+                name.classList.add('border-red-500');
+                nameError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                name.classList.remove('border-red-500');
+                nameError.classList.add('hidden');
+            }
+
+            // Email validation
+            const email = document.getElementById('email');
+            const emailError = email.nextElementSibling;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                email.classList.add('border-red-500');
+                emailError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                email.classList.remove('border-red-500');
+                emailError.classList.add('hidden');
+            }
+
+            // Message validation
+            const message = document.getElementById('message');
+            const messageError = message.nextElementSibling;
+            if (message.value.length < 10) {
+                message.classList.add('border-red-500');
+                messageError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                message.classList.remove('border-red-500');
+                messageError.classList.add('hidden');
+            }
+
+            if (isValid) {
+                // Show success toast
+                toast.classList.remove('translate-y-16', 'opacity-0');
+                toast.classList.add('translate-y-0', 'opacity-100');
+                
+                setTimeout(() => {
+                    toast.classList.remove('translate-y-0', 'opacity-100');
+                    toast.classList.add('translate-y-16', 'opacity-0');
+                }, 3000);
+
+                form.reset();
+            }
+        });
+    </script>
+</body>
+</html>
